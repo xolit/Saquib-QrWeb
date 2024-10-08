@@ -1,0 +1,95 @@
+:root {
+  --igColor: black;
+  --snapColor: black;
+  --font: "Afacad Flux", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #fffcd4;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25%;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #1f1f1f;*/
+}
+
+#image {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  animation: imageAnimation 2s ease-in-out forwards; /* Add animation to image */
+}
+
+#links {
+  height: 150px;
+  width: 150px;
+  /* background-color: cyan;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  outline: none;
+  animation: linksAnimation 2s ease-in-out forwards; /* Add animation to links */
+}
+
+#instagram {
+  width: 160px;
+  padding: 10px;
+  border: 1.8px solid var(--igColor);
+  color: var(--igColor);
+  border-radius: 10px;
+  font-family: var(--font);
+  background: transparent;
+  text-decoration: none;
+}
+
+#snapchat {
+  width: 160px;
+  padding: 10px;
+  border: 1.8px solid var(--snapColor);
+  border-radius: 10px;
+  color: var(--snapColor);
+  font-family: var(--font);
+  background-color: transparent;
+  text-decoration:none;
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: translateY(-100%); /* Start offscreen from the top */
+    opacity: 0; /* Initially hidden */
+  }
+  100% {
+    transform: translateY(0); /* End at its normal position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes linksAnimation {
+  0% {
+    transform: translateY(100%); /* Start offscreen from the bottom */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at its normal position */
+    opacity: 1;
+  }
+}
